@@ -1,0 +1,16 @@
+<script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
+<script>
+  var counter = (state, action) => {
+    switch(action.type) {
+      case 'INCREMENT':
+        return state + 1
+      default:
+        return state
+    }
+  }
+  var store = Redux.createStore( counter , 0, window.__REDUX_DEVTOOLS_EXTENSION__() )
+  var render = () => { document.getElementById('value').innerHTML = store.getState().toString() }
+  store.subscribe( render )
+</script>
+<span id="value" onClick ="store.dispatch({type: 'INCREMENT'});">0</span> <- Click on number<BR/>
+Simple Counter Redux ref: https://github.com/reactjs/redux/tree/master/examples/counter-vanilla
