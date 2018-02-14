@@ -1,0 +1,15 @@
+<script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
+<script type="text/javascript" src="reducers/taxCalculation.js"></script>
+<script>
+	var initialState = { 'originalAmt':0 ,  'tax': 0, 'total':0 }
+	var store = Redux.createStore(taxCalculation, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+	var render = () => document.getElementById('total').innerHTML = store.getState().total.toString()
+	store.subscribe( render )
+</script>
+<input name="originalAmt" id="originalAmt" type="number" onkeyup="store.dispatch({type: 'ORIGINALAMTCHANGED', 'val':this.value});" />
+<select name="tax" onchange="store.dispatch({type: 'TAXCHANGED', 'val':this.value});">
+  <option value="0">NOVAT</option>
+  <option value="10">10% VAT</option>
+  <option value="20">20% VAT</option>
+</select>
+<span id="total">0</span>

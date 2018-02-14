@@ -1,0 +1,10 @@
+{
+  "name": "redux2",
+  "version": "1.0.0",
+  "description": "Now that we have a example in redux1 working in a single page, we have split the same into diffrent files",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayurdange/React-ReduxGroundUp.git"
+  },
+  "homepage": "https://github.com/mayurdange/React-ReduxGroundUp#readme"
+}
