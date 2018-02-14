@@ -1,0 +1,1 @@
+seprated the reducer into a seprate dir for the js file.
