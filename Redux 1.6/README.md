@@ -11,3 +11,11 @@ now we need to add redux dependency, so it is available offline using 'npm insta
 [ adding --save updated the package.json to add redux dependency, the js will be downloaded in node_modules folder ]
 
 now that we have the scripts, we can include those scripts from within node_modules.
+
+to run this app we have to first run the command 'npm install'
+[as this will download the dependencies to node_modules dir, we usually don't commit this dir, as any developer can easily get the dependencies using npm install ]
+
+
+then just double click the html file or run 'npm start' to do the same.
+
+we have included script to start the html file in package.json , this allows us to easily manage application startup for further tutorials when the startup scripts are more complex.
