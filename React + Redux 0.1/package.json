@@ -1,0 +1,16 @@
+{
+  "name": "reactredux0.1",
+  "version": "1.0.0",
+  "description": "We still had to include dependencies manually, using browserify to combine all the JS code.",
+  "scripts": {
+    "start": "browserify --debug --extension=js -o bundle.js component.js && start index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+	"browserify": "^16.1.0",
+    "redux": "^3.7.2",
+	"react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
