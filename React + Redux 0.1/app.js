@@ -1,5 +1,3 @@
-React = require('React');
-ReactDOM = require('react-dom');
 taxCalreducer = require('./reducers/taxCalculation.js');
 
 var Redux = require('Redux');

@@ -1,4 +1,6 @@
 app = require('./app.js');
+React = require('React');
+ReactDOM = require('react-dom');
 
 store = app.store
 function inputValueHandler(event){
