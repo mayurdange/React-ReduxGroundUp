@@ -1,8 +1,0 @@
-<script type="text/javascript" src="bundle.js"></script>
-<input name="originalAmt" id="originalAmt" type="number" onkeyup="window.store.dispatch({type: 'ORIGINALAMTCHANGED', 'val':this.value});" />
-<select name="tax" onchange="window.store.dispatch({type: 'TAXCHANGED', 'val':this.value});">
-  <option value="0">NOVAT</option>
-  <option value="10">10% VAT</option>
-  <option value="20">20% VAT</option>
-</select>
-<span id="total">0</span>

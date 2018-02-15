@@ -1,0 +1,28 @@
+<div id="app"></div>
+<script src="node_modules\redux\dist\redux.js"></script>
+<script type="text/javascript" src="reducers/taxCalculation.js"></script>
+<script src="./node_modules/react/umd/react.development.js"></script>
+<script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+<script>
+	var initialState = { 'originalAmt':0 ,  'tax': 0, 'total':0 }
+	var store = Redux.createStore(taxCalculation, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+	var render = () => document.getElementById('total').innerHTML = store.getState().total.toString()
+	store.subscribe( render )
+	function inputValueHandler(event){
+		store.dispatch({type: 'ORIGINALAMTCHANGED', 'val':event.target.value});
+	}
+	function taxValueHandler(event){
+		store.dispatch({type: 'TAXCHANGED', 'val':event.target.value});
+	}
+	var rootElement = 
+		React.createElement('div', {}, 
+			React.createElement('input', {id: 'originalAmt',onKeyUp: inputValueHandler },  ),
+			React.createElement('select', {id: 'tax', onChange: taxValueHandler },
+				React.createElement('option', {value : "0"}, 'NOVAT' ),
+				React.createElement('option', {value : "10"}, '10% VAT' ),
+				React.createElement('option', {value : "20"}, '20% VAT' )
+			),
+			React.createElement('span', {id:'total'}, "0")
+		)
+	ReactDOM.render(rootElement, document.querySelector('#app'))
+</script>

@@ -1,0 +1,15 @@
+{
+  "name": "reactredux0",
+  "version": "1.0.0",
+  "description": "Combining redux1.2 + react1.1 into a single application.",
+  "scripts": {
+    "start": "start Component.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^3.7.2",
+	"react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
